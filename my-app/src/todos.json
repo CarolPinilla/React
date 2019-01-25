@@ -1,0 +1,25 @@
+{
+    "todos": [
+    {
+        "title": "Task 1",
+        "responsable": "Carol",
+        "descripcion": "lorem inpsum",
+        "priority": "low"
+    },
+
+    {
+        "title": "Task 2",
+        "responsable": "Yiset",
+        "descripcion": "lorem inpsum 2",
+        "priority": "medium"
+    },
+
+    {
+        "title": "Task 3",
+        "responsable": "Pinilla",
+        "descripcion": "lorem inpsum 3",
+        "priority": "high"
+    }
+]
+
+}
