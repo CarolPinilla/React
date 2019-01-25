@@ -21,7 +21,14 @@ class App extends Component {
   }
 
   handleRemove(index){
-    console.log(index);
+    if (window.confirm('¿Esta seguro de eliminar la tarea?')){
+      this.setState({
+        //filter recorre uno a uno los elementos que cumplan x condicion y devuelve un arreglo
+        todos: this.state.todos.filter((e, i) =>{
+          return i !== index
+        })
+      })
+    }
   }
 
 
