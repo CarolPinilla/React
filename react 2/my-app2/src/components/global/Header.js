@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import logo from './images/logo.svg';
 import './css/Header.css';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
-  static PropTypes = {
-    title: PropTypes.string.isRequired,
-    items: PropTypes.array.isRequired
+  static propTypes = {
+    title: propTypes.string.isRequired,
+    items: propTypes.array.isRequired
   };
   render() {
     const{ title, items}= this.props;
@@ -18,7 +19,10 @@ class Header extends Component {
         </div>     
           <h2>{title}</h2>
           <ul className="Menu">
-            {items && items.map((item, key) => <li key = {key}>{item.title}</li>)}
+            {items && items.map(
+              (item, key) => <li key = {key}><Link to={item.url}>{item.title}</Link></li>
+              )
+              }
           </ul>
       </div>
     );
