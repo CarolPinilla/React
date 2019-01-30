@@ -1,8 +1,17 @@
+//Dependences
 import React, { Component } from 'react';
 import './App.css';
 import Button from '@material-ui/core/Button';
+
+//Components 
 import { todos } from './todos.json';
 import Form1 from './components/Form1';
+import Header from './components/global/Header';
+//import Content from './components/global/Content';
+//import Footer from './components/global/Footer';
+
+//Data
+import items from './data/menu';
 
 
 class App extends Component {
@@ -60,16 +69,8 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <nav className="navbar navbar-dark bg-dark">
-          <p className="text-white">Task
-          <span className="badge badge-pill badge-light ml-2">
-              {this.state.todos.length}
-            </span>
-          </p>
-        </nav>
-
+        <Header title="Ejemplo" items={items}/>
         <div className="container">
-
           <div className="row mt-4">
             <div className="col-md-3">
               <Button variant="raised" color="primary">

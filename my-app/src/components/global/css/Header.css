@@ -1,0 +1,21 @@
+.Menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Menu li {
+  display: inline-block;
+  padding-right: 10px;
+}
+ .Menu li a{
+   color: #ccc;
+   text-decoration: none;
+ }
+ .Menu li a:hover{
+   color: #EEE;
+ }
+
+ #navbar {
+   text-align: center;
+ }

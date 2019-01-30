@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Input from './Input';
+import ButtonForm from './Button';
+import { ValidatorForm} from 'react-material-ui-form-validator';
 
 class Form1 extends Component{
     constructor(){
@@ -29,8 +32,8 @@ class Form1 extends Component{
     render() {
         return (
           <div className="card">
-            <form className="card-body" onSubmit={this.handleSubmit}>
-              <div className="form-group">
+            <ValidatorForm className="card-body" onSubmit={this.handleSubmit}>
+             {/*  <div className="form-group">
                 <input
                   type="text"
                   name="title"
@@ -38,25 +41,23 @@ class Form1 extends Component{
                   onChange={this.handleInput}
                   placeholder="Title"
                   />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="responsable"
-                  className="form-control"
-                  onChange={this.handleInput}
-                  placeholder="Responsable"
-                  />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="descripcion"
-                  className="form-control"
-                  onChange={this.handleInput}
-                  placeholder="Descripcion"
-                  />
-              </div>
+              </div> */}
+              <Input 
+
+                nameInput="title"
+                onChangeInput = {this.handleInput}
+                placeHolderInput = "Title"
+              />
+              <Input 
+                nameInput="responsable"
+                onChangeInput = {this.handleInput}
+                placeHolderInput = "Responsable"
+              />
+              <Input 
+                nameInput="descripcion"
+                onChangeInput = {this.handleInput}
+                placeHolderInput = "Descripcion"
+              />
               <div className="form-group">
                 <select
                     name="priority"
@@ -68,10 +69,8 @@ class Form1 extends Component{
                   <option>high</option>
                 </select>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Guardar
-              </button>
-            </form>
+              <ButtonForm/>
+            </ValidatorForm>
           </div>
         )
       }
